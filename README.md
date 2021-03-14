@@ -1,6 +1,6 @@
-# SmartFamily.Gedcom
+# SmartFamily.Core
 
-A .Net Standard library for loading, saving, working with and analyzing family trees stored in the GEDCOM format.
+A .Net Standard library for loading, saving, working with and analyzing family trees.
 
 ## Installation
 
