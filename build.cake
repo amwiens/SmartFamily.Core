@@ -144,14 +144,14 @@ Task("Pack")
         }
     });
 
-/*Task("GenerateReports")
+Task("GenerateReports")
     .Does(() =>
     {
         ReportGenerator(GetFiles($"{coveragePath}/*.xml"), artifactsPath, new ReportGeneratorSettings
         {
             ArgumentCustomization = args => args.Append("-reporttypes:lcov;HTMLSummary;TextSummary;")
         });
-    });*/
+    });
 
 Task("UploadCoverage")
     .WithCriteria(!string.IsNullOrEmpty(coverallsToken) && BuildSystem.IsRunningOnGitHubActions)
@@ -253,7 +253,7 @@ Task("PublishDocs")
         var publishFolder = $"./artifacts/docs-publish-{DateTime.Now.ToString("yyyyMMdd_HHmmss")}";
         Information("Publishing Folder: {0}", publishFolder);
         Information("Getting publish branch...");
-        GitClone("https://github.com/amwiens/SmartFamily.Core.git", publishFolder, new GitCloneSettings { BranchName = "gh-pages" });
+        GitClone("https://github.com/amwiens/SmartFamily.Core.git", publishFolder, new GitCloneSettings { BranchName = "main" });
 
         Information("Sync output files...");
 
@@ -299,7 +299,7 @@ Task("Default")
     .IsDependentOn("Build")
     .IsDependentOn("Test")
     .IsDependentOn("Pack")
-    //.IsDependentOn("GenerateReports")
+    .IsDependentOn("GenerateReports")
     .IsDependentOn("BuildDocs");
 
 Task("CI")
