@@ -144,14 +144,14 @@ Task("Pack")
         }
     });
 
-Task("GenerateReports")
+/*Task("GenerateReports")
     .Does(() =>
     {
         ReportGenerator(GetFiles($"{coveragePath}/*.xml"), artifactsPath, new ReportGeneratorSettings
         {
             ArgumentCustomization = args => args.Append("-reporttypes:lcov;HTMLSummary;TextSummary;")
         });
-    });
+    });*/
 
 Task("UploadCoverage")
     .WithCriteria(!string.IsNullOrEmpty(coverallsToken) && BuildSystem.IsRunningOnGitHubActions)
@@ -299,7 +299,7 @@ Task("Default")
     .IsDependentOn("Build")
     .IsDependentOn("Test")
     .IsDependentOn("Pack")
-    .IsDependentOn("GenerateReports")
+    //.IsDependentOn("GenerateReports")
     .IsDependentOn("BuildDocs");
 
 Task("CI")
