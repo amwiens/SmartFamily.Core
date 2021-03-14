@@ -253,7 +253,7 @@ Task("PublishDocs")
         var publishFolder = $"./artifacts/docs-publish-{DateTime.Now.ToString("yyyyMMdd_HHmmss")}";
         Information("Publishing Folder: {0}", publishFolder);
         Information("Getting publish branch...");
-        GitClone("https://github.com/amwiens/SmartFamily.Core.git", publishFolder, new GitCloneSettings { BranchName = "main" });
+        GitClone("https://github.com/amwiens/SmartFamily.Core.git", publishFolder, new GitCloneSettings { BranchName = "gh-pages" });
 
         Information("Sync output files...");
 

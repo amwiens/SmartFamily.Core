@@ -12,17 +12,7 @@ namespace SmartFamily.Core.Models
 
         public string? Gender { get; set; }
 
-        //public FactDate BirthDate { get; set; }
-
-        //public FactLocation BirthLocation { get; set; }
-
-        //public FactDate DeathDate { get; set; }
-
-        //public FactLocation DeathLocation { get; set; }
-
         public string? Occupation { get; set; }
-
-        //public Age LifeSpan { get; set; }
 
         public string? Relation { get; set; }
 
