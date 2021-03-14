@@ -46,7 +46,7 @@ uint coverageThreshold = 50;
 Setup(context =>
 {
    BuildContext.Initialize(Context);
-   Information($"Building SmartFamily.Gedcom with configuration {configuration} on branch {currentBranch.FriendlyName}");
+   Information($"Building SmartFamily.Core with configuration {configuration} on branch {currentBranch.FriendlyName}");
 });
 
 Teardown(ctx =>
