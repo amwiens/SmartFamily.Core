@@ -10,7 +10,7 @@
 
 // Install addins
 #addin nuget:?package=Cake.Coverlet&version=2.5.1
-#addin nuget:?package=Cake.Sonar&version=1.1.25
+#addin nuget:?package=Cake.Sonar
 #addin nuget:?package=Cake.DocFx&version=0.13.1
 #addin nuget:?package=Cake.Git&version=1.0.0
 #addin nuget:?package=Cake.Kudu&version=1.0.0
