@@ -299,7 +299,7 @@ Task("Default")
     .IsDependentOn("Build")
     .IsDependentOn("Test")
     .IsDependentOn("Pack")
-    .IsDependentOn("GenerateReports")
+    //.IsDependentOn("GenerateReports")
     .IsDependentOn("BuildDocs");
 
 Task("CI")
